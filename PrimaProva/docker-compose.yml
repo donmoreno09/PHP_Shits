@@ -1,0 +1,10 @@
+
+services:
+  web:                     # Nome del servizio (puoi chiamarlo come vuoi)
+    build: .               # Costruisce l'immagine usando il Dockerfile nella cartella corrente
+    ports:
+      - "8080:80"          # Mappa la porta 80 del container sulla 8080 del tuo PC (http://localhost:8080)
+    volumes:
+      - ./src:/var/www     # Collega la tua cartella "src/" al container → così puoi modificare i file in tempo reale
+    container_name: php-app  # Nome leggibile del container (facoltativo)
+ 
